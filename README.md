@@ -37,7 +37,7 @@ System benchmarking revealed a distinct balance between raw spatial precision (M
 
 | Model | Test Accuracy | Mean IoU| Mean Dice | Mean Recall | Runtime
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **PAN** | **53%** | **20%** | **27%** | **35%** | **23 minutes** |
+| **PAN** | *53%* | *20%* | *27%* | *35%* | *23 minutes* |
 | **UNet** | **59%** | **27%** | **38%** | **39%** | **26 minutes** |
 | **UNet++** | **65%** | **32%** | **43%** | **44%** | **51 minutes** |
 | **DeepLabV3+** | **63%** | **29%** | **39%** | **41%** | **36 minutes** |
