@@ -35,11 +35,12 @@ To identify the absolute best operational balance between compute footprint and 
 ## Analytical Trade-Off & Performance Metrics
 System benchmarking revealed a distinct balance between raw spatial precision (Mean IoU) and computational speed:
 
-| Architecture Configuration | Pixel Accuracy | Mean IoU | Recall Performance | System Footprint Profile |
-| :--- | :--- | :--- | :--- | :--- |
-| **UNet++** *(Top Performer)* | **65%** | **32%** | **44%** | Heavy GPU allocation requirement; extended compilation times. |
-| **DeepLabV3+** | — | Competitive | 41% | Balanced processing runtime with stable multi-scale context mapping. |
-| **PAN** | — | Baseline | — | **Optimal Edge Fit:** Lightest hardware requirements and fastest execution cycle. |
+| Model | Test Accuracy | Mean IoU| Mean Dice | Mean Recall | Runtime
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **PAN** | **53%** | **20%** | **27%** | **35%** | **23 minutes** |
+| **UNet** | **59%** | **27%** | **38%** | **39%** | **26 minutes** |
+| **UNet++** | **65%** | **32%** | **43%** | **44%** | **51 minutes** |
+| **DeepLabV3+** | **63%** | **29%** | **39%** | **41%** | **36 minutes** |
 
 *Systems Analysis Note:* Boundary precision was slightly limited by the fuzzy edges generated via automated SAM2 masks versus manual dental labeling, alongside minor classification overlap between inflamed tissues and natural facial colour boundaries (e.g., lip tissue).
 
